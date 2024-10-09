@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artino Pozorište</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">Artino</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('welcome')">Početna</a></li>
+                <li><a href="#" onclick="showSection('repertoar')">Repertoar</a></li>
+                <li><a href="#" onclick="showSection('o-nama')">O nama</a></li>
+                <li><a href="#" onclick="showSection('recenzije')">Recenzije</a></li>
+                <li><a href="#" onclick="showSection('kontakt')">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="welcome-background">
+            <div id="welcome">
+                <blockquote>
+                    "Pozorište je mesto gde se snovi pretvaraju u stvarnost."
+                </blockquote>
+                <p>- Simon R. Green, pozorišni kritičar</p>
+            </div>
+
+            <div id="repertoar" class="hidden">
+                <h3>NEDELJNI REPERTOAR</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Naziv predstave</th>
+                            <th>Pisac dela</th>
+                            <th>Žanr</th>
+                            <th>Datum izvođenja</th>
+                            <th>Vreme izvođenja</th>
+                            <th>Scena</th>
+                            <th>Cena karte</th>
+                            <th>Rezerviši</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Na Drini ćuprija</td>
+                            <td>Ivo Andrić</td>
+                            <td>Drama</td>
+                            <td>2024-10-15</td>
+                            <td>19:00</td>
+                            <td>Velika scena</td>
+                            <td>1000 RSD</td>
+                            <td><button class="reserve-button" onclick="reserveTicket()">Rezerviši</button></td>
+                        </tr>
+                        <tr>
+                            <td>Gospođa ministarka</td>
+                            <td>Branislav Nušić</td>
+                            <td>Komedija</td>
+                            <td>2024-10-16</td>
+                            <td>20:00</td>
+                            <td>Mala scena</td>
+                            <td>1200 RSD</td>
+                            <td><button class="reserve-button" onclick="reserveTicket()">Rezerviši</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bure baruta</td>
+                            <td>Dušan Kovačević</td>
+                            <td>Drama</td>
+                            <td>2024-10-17</td>
+                            <td>18:30</td>
+                            <td>Velika scena</td>
+                            <td>1500 RSD</td>
+                            <td><button class="reserve-button" onclick="reserveTicket()">Rezerviši</button></td>
+                        </tr>
+                        <tr>
+                            <td>Hamlet</td>
+                            <td>William Shakespeare</td>
+                            <td>Tragedija</td>
+                            <td>2024-10-18</td>
+                            <td>19:00</td>
+                            <td>Velika scena</td>
+                            <td>1800 RSD</td>
+                            <td><button class="reserve-button" onclick="reserveTicket()">Rezerviši</button></td>
+                        </tr>
+                        <tr>
+                            <td>Čekajući Godoa</td>
+                            <td>Samuel Beckett</td>
+                            <td>Drama</td>
+                            <td>2024-10-19</td>
+                            <td>20:30</td>
+                            <td>Mala scena</td>
+                            <td>1100 RSD</td>
+                            <td><button class="reserve-button" onclick="reserveTicket()">Rezerviši</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="o-nama" class="hidden">
+                <h3 class="centered">O nama</h3>
+                <p>Artino Pozorište je mesto gde se umetnost susreće sa publikom. Naša misija je da pružimo nezaboravne predstave i kulturološke doživljaje za sve.</p>
+            </div>
+
+            <div id="recenzije" class="hidden">
+                <p class="review-prompt">VOLELI BI SMO DA ČUJEMO VAŠE MIŠLJENJE, OSTAVITE VAŠU RECENZIJU:</p>
+                <div class="review-form">
+                    <label for="recenzija-input">Vaša recenzija:</label>
+                    <input type="text" id="recenzija-input" placeholder="Unesite vašu recenziju" required>
+                    
+                    <label for="ocena-input">Vaša ocena:</label>
+                    <input type="number" id="ocena-input" placeholder="Unesite ocenu (1-5)" min="1" max="5" required>
+
+                    <button id="submit-review" onclick="submitReview()">Pošalji recenziju</button>
+                </div>
+            </div>
+
+            <div id="kontakt" class="hidden">
+                <div class="contact-container">
+                    <h3>Kontaktirajte nas</h3>
+                    <form id="contact-form">
+                        <input type="text" placeholder="Ime i prezime" required>
+                        <input type="email" placeholder="Email adresa" required>
+                        <input type="text" placeholder="Naslov" required>
+                        <textarea placeholder="Poruka" rows="5" required></textarea>
+                        <button type="button" onclick="sendMessage()">Pošalji poruku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Artino &copy; 2024 All rights reserved. Designed by Veljko</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

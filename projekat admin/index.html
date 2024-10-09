@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artino Pozorište</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Artino</div>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Početna</a></li>
+                <li><a href="#" id="repertoar-button">Repertoar</a></li>
+                <li><a href="#" id="recenzije-button">Recenzije</a></li>
+                <li><a href="#" id="logout-button">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div id="welcome">
+            <h2>Dobrodošao Admin u Artino Pozorište!</h2>
+        </div>
+
+        <div id="repertoar" class="hidden">
+            <h3 class="centered">Repertoar</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naziv predstave</th>
+                        <th>Pisac dela</th>
+                        <th>Žanr</th>
+                        <th>Datum izvođenja</th>
+                        <th>Vreme izvođenja</th>
+                        <th>Scena</th>
+                        <th>Cena karte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select>
+                                <option value="">Izaberi predstavu</option>
+                                <option value="Na Drini ćuprija">Na Drini ćuprija</option>
+                                <option value="Gospođa ministarka">Gospođa ministarka</option>
+                                <option value="Bure baruta">Bure baruta</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Izaberi pisca</option>
+                                <option value="Ivo Andrić">Ivo Andrić</option>
+                                <option value="Branislav Nušić">Branislav Nušić</option>
+                                <option value="Dušan Kovačević">Dušan Kovačević</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Izaberi žanr</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Komedia">Komedia</option>
+                                <option value="Tragedija">Tragedija</option>
+                            </select>
+                        </td>
+                        <td><input type="date"></td>
+                        <td><input type="time"></td>
+                        <td>
+                            <select>
+                                <option value="">Izaberi scenu</option>
+                                <option value="Velika scena">Velika scena</option>
+                                <option value="Mala scena">Mala scena</option>
+                                <option value="Otvorena scena">Otvorena scena</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Izaberi cenu</option>
+                                <option value="1000 RSD">1000 RSD</option>
+                                <option value="2000 RSD">2000 RSD</option>
+                                <option value="3000 RSD">3000 RSD</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="recenzije" class="hidden">
+            <h3 class="centered">Recenzije</h3>
+            <div class="review-form">
+                <label for="recenzija-select">Vaša recenzija:</label>
+                <select id="recenzija-select">
+                    <option value="">Izaberi recenziju</option>
+                    <option value="Odlična predstava!">Odlična predstava!</option>
+                    <option value="Bilo je zabavno!">Bilo je zabavno!</option>
+                    <option value="Preporučujem svima!">Preporučujem svima!</option>
+                </select>
+
+                <label for="ocena-select">Vaša ocena:</label>
+                <select id="ocena-select">
+                    <option value="">Izaberi ocenu</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Artino &copy; 2024 All rights reserved. Designed by Veljko</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
